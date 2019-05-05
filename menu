@@ -1,0 +1,12 @@
+[[pdoMenu?
+&parents =`0`
+&level = `2`
+    &tplOuter = `@INLINE <ul class="nav navbar-nav navbar-right">[[+wrapper]]</ul>`
+        &tpl = `@INLINE <li><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+        &tplParentRow = `@INLINE <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+        &tplHere = `@INLINE <li class="active"><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+            &tplInner = `@INLINE <ul class="dropdown-menu">[[+wrapper]]</ul>`
+            &tplInnerRow =`@INLINE <li><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+            &tplParentRowHere = `@INLINE <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+            &tplParentRowActive = `@INLINE <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="[[+link]]" [[+attributes]]>[[+menutitle]]</a>[[+wrapper]]</li>`
+]]
