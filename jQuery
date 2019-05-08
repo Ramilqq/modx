@@ -1,0 +1,26 @@
+$(document).ready(function(){
+    $('.btn.btn-secondary').click(function(){
+        $.ajax({ 
+            url:"[[~84]]",
+            type: "POST", 
+            dataType:'json',
+            data : { name : 'Рамиль', msg : 'test', trigger : '1' }, 
+            success: function(data){  
+                if(data.name != 0 ){
+                    alert(data.own);
+                    alert(data.msg);
+                }
+            }  
+        });  
+        return false;  
+    });
+}); 
+
+<?php
+if($_POST['trigger'] == '1'){
+   $json = array(
+        'own'=>'owner in site',
+        'msg'=>'Привет '.$_POST['name']
+    );
+    echo json_encode($json); 
+}
