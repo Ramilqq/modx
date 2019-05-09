@@ -29,7 +29,7 @@ if($_POST['trigger'] == '1'){
 *******************************************************************************************************
 Запрос ресурса
 <script>
-  $(document).on('click', '#msMiniCart', function(e) {
+  $(document).on('click', '#id', function(e) {
 	e.preventDefault();
 	$.ajax({  
 	  type: "POST",  
@@ -39,7 +39,7 @@ if($_POST['trigger'] == '1'){
 		if (data){
 		  $('.basket .ajax-data').html(data);
 		}else{
-		  miniShop2.Message.error('Что-то пошло не так, попробуйте позже!');
+		  m.Message.error('Что-то пошло не так, попробуйте позже!');
 		}
 	  } 
 	}); 
