@@ -4,7 +4,7 @@
 m90833zx
 pk6UahD6
 
-
+*******************************************************************************************************(nginx)
 sudo apt-get update<p>
 sudo apt-get install nginx<p>
 sudo apt-get install mysql-server<p>
@@ -15,7 +15,7 @@ sudo phpenmod curl<p>
 sudo chown -R www-data:www-data *<p>
 sudo ln -s /etc/nginx/sites-available/server001.ru /etc/nginx/sites-enabled/server001.ru<p>
   
-  
+*******************************************************************************************************(503)
 location ~ \.php$ {<p>
   fastcgi_pass unix:/tmp/php5-fpm.sock;<p>
   fastcgi_index index.php;<p>
@@ -23,3 +23,4 @@ location ~ \.php$ {<p>
   include fastcgi_params;<p>
   fastcgi_read_timeout 300;<p>
 }<p>
+*******************************************************************************************************
