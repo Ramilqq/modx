@@ -13,11 +13,13 @@ sudo phpenmod curl<p>
 sudo chown -R www-data:www-data *<p>
 sudo ln -s /etc/nginx/sites-available/server001.ru /etc/nginx/sites-enabled/server001.ru<p>
 server {
+        
         listen 80;
         server_name server002.ru www.server002.ru;
         root /var/www/server002.ru/public_html;
         index index.php index.html;
         client_max_body_size 30M;
+        
         location / {
                 root /var/www/server002.ru/public_html;
                 if (!-e $request_filename) {
