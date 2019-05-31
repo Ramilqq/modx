@@ -18,6 +18,7 @@ sudo phpenmod curl<p>
 
 sudo chown -R www-data:www-data *<p>
 sudo ln -s /etc/nginx/sites-available/server001.ru /etc/nginx/sites-enabled/server001.ru<p>
+CREATE DATABASE newdb_name CHARACTER SET utf8 COLLATE utf8_general_ci;<p>
 server {
         
         listen 80;
