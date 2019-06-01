@@ -9,6 +9,8 @@ sudo apt-get install mysql-server<p>
 sudo apt-get install php-fpm php-mysql<p>
 sudo apt-get install php-curl<p>
 sudo phpenmod curl<p>
+ln -s /usr/share/phpmyadmin /var/www/blog/public/phpmyadmin787<p>
+
 #(GIT)
         git status
         git add %file_path%
