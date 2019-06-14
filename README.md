@@ -1,22 +1,22 @@
-# (nginx)
-sudo apt-get update<p>
-sudo apt-get install nginx<p>
-sudo apt-get install mysql-server<p>
-sudo apt-get install php-fpm php-mysql<p>
-sudo apt-get install php-curl<p>
-sudo phpenmod curl<p>
-ln -s /usr/share/phpmyadmin /var/www/blog/public/phpmyadmin787<p>
+# (lamp)
+        sudo apt-get update<p>
+        sudo apt-get install nginx<p>
+        sudo apt-get install mysql-server<p>
+        sudo apt-get install php-fpm php-mysql<p>
+        sudo apt-get install php-curl<p>
+        sudo phpenmod curl<p>
+        ln -s /usr/share/phpmyadmin /var/www/blog/public/phpmyadmin787<p>
+        
+        sudo chown -R www-data:www-data *<p>
+        sudo ln -s /etc/nginx/sites-available/server001.ru /etc/nginx/sites-enabled/server001.ru<p>
 
 # (GIT)
+        
         git status
         git add %file_path%
         git commit -m "%commit_message%"
         git push origin master
         
-
-sudo chown -R www-data:www-data *<p>
-sudo ln -s /etc/nginx/sites-available/server001.ru /etc/nginx/sites-enabled/server001.ru<p>
-CREATE DATABASE newdb_name CHARACTER SET utf8 COLLATE utf8_general_ci;<p>
 server {
         
         listen 80;
@@ -50,7 +50,8 @@ server {
         }
 }
 
-Nginx{
+nginx.conf{
+
         user www-data;
         worker_processes auto;
         pid /run/nginx.pid;
@@ -132,8 +133,4 @@ Nginx{
         #               proxy      on;
         #       }
         #}
-
-
-
-
 }
