@@ -17,8 +17,9 @@
         git commit -m "%commit_message%"
         git push origin master
         
-server {
-        
+# (server) 
+
+        { 
         listen 80;
         server_name server002.ru www.server002.ru;
         root /var/www/server002.ru/public_html;
@@ -48,10 +49,11 @@ server {
         location ~ /\.ht {
                 deny  all;
         }
-}
+        }
 
-nginx.conf{
-
+# (nginx.conf)
+        
+        {
         user www-data;
         worker_processes auto;
         pid /run/nginx.pid;
@@ -133,4 +135,4 @@ nginx.conf{
         #               proxy      on;
         #       }
         #}
-}
+        }
