@@ -1,7 +1,3 @@
-# modx
-
-m90833zx
-pk6UahD6
 # (nginx)
 sudo apt-get update<p>
 sudo apt-get install nginx<p>
@@ -11,7 +7,7 @@ sudo apt-get install php-curl<p>
 sudo phpenmod curl<p>
 ln -s /usr/share/phpmyadmin /var/www/blog/public/phpmyadmin787<p>
 
-#(GIT)
+# (GIT)
         git status
         git add %file_path%
         git commit -m "%commit_message%"
