@@ -1,0 +1,24 @@
+******************************************************************Добавить все файлы в директории в архив
+function addFileRecursion($zip, $dir, $start = '')
+{
+	echo $dir;
+	if (empty($start)) {
+		$start = $dir;
+	}
+	
+	if ($objs = glob($dir . '/*')) {
+		foreach($objs as $obj) { 
+			if (is_dir($obj)) {
+				addFileRecursion($zip, $obj, $start);
+			} else {
+				$zip->addFile($obj, str_replace(dirname($start) . '/', '', $obj));
+			}
+		}
+	}
+}
+
+$zip = new ZipArchive();
+$zip->open(__DIR__ . '/core.transport.zip', ZipArchive::CREATE|ZipArchive::OVERWRITE);
+addFileRecursion($zip, __DIR__ . '/core/');
+$zip->close();
+*****************************************************************
